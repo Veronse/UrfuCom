@@ -21,11 +21,11 @@ body{
   background-image: url(../image/backgroundBody.png);
   background-repeat: no-repeat;
   background-size: cover;
-  float:left;
+  background-attachment: fixed;
 }
 /* общие стили*/
 a{
-  color: blue;
+  color: #ffa3a3;
 }
 
 a, a:hover{
@@ -41,6 +41,7 @@ a:hover{
 }
 
 .clear{
+  float: left;
   clear: both;
 }
 
@@ -48,17 +49,21 @@ a:hover{
 header{
   float: left;
   width: 100%;
-  height: 3.25%;
+  height: 3.5%;
   background-color: #262424;
+  font-size: 100%;
 }
 
 #userFIO{
-  font-size: 18px;
+  position: relative;
+  float: left;
   font-family: 'Open Sans Light';
+  font-size: 100%;
   color: #b5b1b1;
-  padding: 2px;
-  margin-left: 1em;
-  margin-top: 1px;
+  padding-left: 1%;
+  padding-top: 0.25%;
+  height: 100%;
+  font-size: 18px;
 }
 
 /* Основа */
@@ -165,7 +170,7 @@ background-color: white;
   font-family: 'Open Sans Light', sans-serif;
   color: #b8b6b6;
   font-size: 20px;
-  width: 600px;
+  width: 92%;
   height:auto;
   border: 2px solid #b8b6b6;
   font-weight: bold;
@@ -180,8 +185,8 @@ background-color: white;
   font-family: 'Open Sans Light', sans-serif;
   color: #b8b6b6;
   font-size: 20px;
-  width: 600px;
-  height:100px;
+  width: 92%;
+  height:12.5%;
   border: 2px solid #b8b6b6;
   border-top: none;
   font-weight: bold;
@@ -189,8 +194,8 @@ background-color: white;
 }
 
 .center #AskQuestion button{
-  height: 50px;
-  width:300px;
+  height: 50%;
+  width:60%;
   background-color: #ffa3a3;
   border: 2px solid silver;
   border-radius: 10px;
@@ -198,8 +203,9 @@ background-color: white;
   font-weight: bold;
   position: relative;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 4%;
   cursor: pointer;
+  font-size: 100%;
 }
 
  #ActualQuestionsList{
@@ -209,8 +215,8 @@ background-color: white;
    font-family: 'Open Sans Light', sans-serif;
    color: #b8b6b6;
    font-size: 20px;
-   width: 600px;
-   height:250px;
+   width: 92%;
+   height:25%;
    border: 2px solid #b8b6b6;
    border-top: none;
    font-weight: bold;
@@ -229,8 +235,8 @@ background-color: white;
   font-family: 'Open Sans Light', sans-serif;
   color: #b8b6b6;
   font-size: 20px;
-  width: 600px;
-  height:250px;
+  width: 92%;
+  height:25%;
   border: 2px solid #b8b6b6;
   border-top: none;
   font-weight: bold;
@@ -239,15 +245,22 @@ background-color: white;
 }
 
 /* чат */
+.right{
+  float: left;
+  width: 30%;
+  height: 93.5%;
+  margin: 1px;
+
+}
 
 #chatHeader{
   position: relative;
   text-align: center;
-  float: right;
+  float: left;
   font-family: 'Open Sans Light', sans-serif;
   color: #b8b6b6;
   font-size: 20px;
-  width: 400px;
+  width: 72.5%;
   height:auto;
   border: 2px solid #b8b6b6;
   font-weight: bold;
@@ -259,12 +272,12 @@ background-color: white;
 #chatWindow{
   position: relative;
   text-align: center;
-  float: right;
+  float: left;
   font-family: 'Open Sans Light', sans-serif;
   color: #b8b6b6;
   font-size: 20px;
-  width: 400px;
-  height:765px;
+  width: 72.5%;
+  height:80%;
   border: 2px solid #b8b6b6;
   border-top: none;
   font-weight: bold;
@@ -273,20 +286,98 @@ background-color: white;
   margin-right: 10em;
 }
 
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+#overlay #overlayAskQuestion{
+  float: left;
+  font-family: 'Open Sans Light',sans-serif;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   font-size: 14px;
+   color: black;
+   transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   background-color: white;
+   width: 35%;
+   height:35%;
+   z-index: 3;
+   padding-top: 1%;
+   text-align: center;
+}
+
+#overlay #overlayAskQuestion a{
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1%;
+  cursor: pointer;
+}
+
+#overlay #overlayAskQuestion div{
+  padding: 1%;
+}
+
+#overlay #overlayAskQuestion div input{
+  margin-left: 5%;
+  border:2px solid silver;
+  border-radius: 10px;
+}
+
+ #messageTheme{
+  height: 2em;
+  width:20em;
+}
+
+ #message{
+   display: none;
+ }
+
+#overlay #overlayAskQuestion textarea{
+  border:2px solid silver;
+  resize: none;
+}
+
+#overlay #overlayAskQuestion input[type="submit"]{
+  width: 20%;
+  height:10%;
+  position: fixed;
+  bottom: 5%;
+  left:40%;
+  border: 2px solid silver;
+  border-radius: 5px;
+  background-color: #2f7ff7;
+  color: white;
+}
+
+
 
 /* Футер */
 footer{
-  float: left;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 3.25%;
-  padding: 2px;
-  margin-top: 10px;
+  height: 3.5%;
   background-color: #262424;
 }
 
+main{
+  width: 100%;
+  height: 90%;
+  margin-bottom: 1%;
+  z-index: 1;
+}
 #projectName{
   float: left;
   font-size: 26px;
