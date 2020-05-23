@@ -20,7 +20,7 @@ body{
   height:100%;
   background-image: url(../image/AuthBack.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   float:left;
 }
 /* общие стили*/
@@ -41,6 +41,12 @@ a:hover{
 }
 
 /* форма регистрации */
+ img{
+   position: fixed;
+   left:46%;
+   top:5%;
+
+ }
 
 .AuthForm{
   height:200px;
